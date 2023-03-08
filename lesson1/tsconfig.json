@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
-      // "removeComments": true,
-      "outFile": "./dist/output.js",
-    }
-  }
+        "outDir": "dist", //Output directory,
+        "watch": true
+    },
+    "include": ["src"]
+}
