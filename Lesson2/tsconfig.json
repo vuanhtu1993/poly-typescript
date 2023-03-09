@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "outDir": "dist", // Output directory - distination
+        "watch": true
+    },
+    "include": ["src"]
+}
