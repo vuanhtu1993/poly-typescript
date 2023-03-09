@@ -1,3 +1,1 @@
-// Data types
-var greeting = "Hello world";
-console.log(greeting);
+document.querySelector("body").innerHTML = "Xin chào cả lơp";

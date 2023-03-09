@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
-        "outDir": "./dist"
-    }
+        "outDir": "./dist", //Output directory
+        "watch": true
+    },
+    "include": ["src"]
 }
