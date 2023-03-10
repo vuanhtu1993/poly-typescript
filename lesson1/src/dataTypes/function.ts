@@ -62,7 +62,7 @@ console.log(showClasses("Hào", "Typescript"));
 
 // 5. Callback
 const num_arr = [5,6,7]
-const temp = num_arr.map((item) => {
+const temp = num_arr.map((item, index) => {
     return item * 2
 })
 
