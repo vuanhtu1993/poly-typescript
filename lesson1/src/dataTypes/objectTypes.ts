@@ -21,12 +21,3 @@ console.log(trangthai1);
 
 enum CODE {SUCCESS = 200, CLIENT_ERROR = 400, SERVER_ERROR}
 
-// Functions
-const upperCase = (a: string | number): string => {
-    // if (typeof a == "string") {
-    //     console.log(a.toLowerCase());
-    // }
-    // a.toString().toUpperCase()
-}
-
-upperCase(10)

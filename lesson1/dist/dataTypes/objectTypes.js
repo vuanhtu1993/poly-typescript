@@ -23,11 +23,3 @@ var CODE;
     CODE[CODE["CLIENT_ERROR"] = 400] = "CLIENT_ERROR";
     CODE[CODE["SERVER_ERROR"] = 401] = "SERVER_ERROR";
 })(CODE || (CODE = {}));
-// Functions
-var upperCase = function (a) {
-    // if (typeof a == "string") {
-    //     console.log(a.toLowerCase());
-    // }
-    // a.toString().toUpperCase()
-};
-upperCase(10);
