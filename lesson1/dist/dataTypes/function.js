@@ -50,3 +50,22 @@ var showClasses = function (name) {
 };
 console.log(showClasses("Anh Ngọc", "Typescript", "Nodejs"));
 console.log(showClasses("Hào", "Typescript"));
+// 5. Callback
+var num_arr = [5, 6, 7];
+var temp = num_arr.map(function (item) {
+    return item * 2;
+});
+// console.log(temp);
+var we17304_map = function (arr, callback) {
+    var temp = [];
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+        var newItem = callback(arr[i]);
+        temp.push(newItem);
+    }
+    return temp;
+};
+var result = we17304_map(num_arr, function (item) {
+    return item * item;
+});
+console.log(result);
