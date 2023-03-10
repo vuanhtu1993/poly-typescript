@@ -14,6 +14,12 @@ tsc greeting.ts -w
 ### 3. Any
 ### 4. Explicit and Implicit
 ### 5. Function
+#### Function return 
+#### Function parameter
+#### Function default parameter
+#### Function rest parameter
+#### Function declaration
+#### Function return 
 ### 6. Object types {}
 #### Optional Properties ?
 ### 7. Union type Primitive|Primitive|Primitive
@@ -43,4 +49,14 @@ function liveDangerously(x?: number | null) {
 }
 ```
 
+### 9. Assertion
+#### <dataType>Variable or Variable as dataType
+Chỉ có tac dung cho compiler hieu chu KHONG DE EP KIEU
+```typescript
+const num: any = 10
+const str = (<string>num).split("") // ERROR num.split is not a function
+const str2 = (num as string).split("") // ERROR num.split is not a function
+console.log(str2);
+
+```
 

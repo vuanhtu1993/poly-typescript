@@ -22,3 +22,14 @@ var CODE;
     CODE[CODE["SERVER_ERROR"] = 500] = "SERVER_ERROR";
 })(CODE || (CODE = {}));
 const statusCode = CODE.CLIENT_ERROR;
+// Object
+const obj = {
+    name: "Anh Tu",
+    age: 20
+};
+const course1 = {
+    name: "typescript",
+    time: 34,
+    fee: true
+};
+console.log(course1);
