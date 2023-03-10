@@ -28,9 +28,24 @@ var func3 = function () {
 };
 // 5. Callback
 function we17317_map(arr, callback) {
+    var temp = [];
+    for (var i = 0; i < arr.length; i++) {
+        var newItem = callback(arr[i]);
+        temp.push(newItem);
+    }
+    return temp;
 }
-var numberArray = [1, 2, 3];
-var newArr = numberArray.map(function (item) {
-    return item * 2;
+var numberArr = ["string", "string1", "string2"];
+var result1 = we17317_map(numberArr, function (item) {
+    return item * 3;
 });
-console.log(newArr);
+console.log(result1);
+// 6. Rest Parameter
+var showClass = function (name) {
+    var classes = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        classes[_i - 1] = arguments[_i];
+    }
+    console.log("Sinh vi\u00EAn ".concat(name, " h\u1ECDc l\u1EDBp ").concat(classes.join(", ")));
+};
+showClass("Văn Anh", "Nodejs", "Typescript");
