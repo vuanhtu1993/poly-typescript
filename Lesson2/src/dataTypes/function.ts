@@ -54,9 +54,9 @@ const showClasses = function(name: string, ...classes: string[]): string {
 // 5. Callback
 const numArr = [5, 10, 15, 20] 
 
-// const result = numArr.map((item) => {
-//     return item * item
-// })
+const result = numArr.map((item, index) => {
+    return item * item
+})
 
 // console.log(result);
 const we17305_map = function(arr: number[], callback?: (item: number) => number) {
@@ -68,8 +68,8 @@ const we17305_map = function(arr: number[], callback?: (item: number) => number)
     return temp
 }
 
-const result = we17305_map(numArr, (item) => {
-    return item * 2
-})
+// const result = we17305_map(numArr, (item) => {
+//     return item * 2
+// })
 
-console.log(result);
+// console.log(result);

@@ -45,9 +45,9 @@ var showClasses = function (name) {
 // console.log(showClasses("Nam", "Nodejs", "Typescript", "Phap Luat"));
 // 5. Callback
 var numArr = [5, 10, 15, 20];
-// const result = numArr.map((item) => {
-//     return item * item
-// })
+var result = numArr.map(function (item, index) {
+    return item * item;
+});
 // console.log(result);
 var we17305_map = function (arr, callback) {
     var temp = [];
@@ -57,7 +57,7 @@ var we17305_map = function (arr, callback) {
     }
     return temp;
 };
-var result = we17305_map(numArr, function (item) {
-    return item * 2;
-});
-console.log(result);
+// const result = we17305_map(numArr, (item) => {
+//     return item * 2
+// })
+// console.log(result);
