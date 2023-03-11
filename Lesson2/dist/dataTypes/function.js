@@ -34,4 +34,29 @@ var showName = function () {
     return;
 };
 // 4. Rest parameter
+function printClass(name) {
+    var classes = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        classes[_i - 1] = arguments[_i];
+    }
+    return "Sinh vi\u00EAn ".concat(name, " h\u1ECDc l\u1EDBp ").concat(classes.join(", "));
+}
+console.log(printClass("Hưng", "Typescript", "Nodejs", "Phap Luat"));
 // 5. Callback
+var numArr = [1, 2, 3, 5, 8, 13]; // Fibonacci
+// const result = numArr.map((item) => {
+//     return item * item
+// })
+// console.log(result);
+var we17307_map = function (arr, callback) {
+    var temp = [];
+    for (var i = 0; i < arr.length; i++) {
+        var newItem = callback(arr[i]);
+        temp.push(newItem);
+    }
+    return temp;
+};
+var result = we17307_map(numArr, function (item) {
+    return item * item;
+});
+console.log(result);
