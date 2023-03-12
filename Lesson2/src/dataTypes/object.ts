@@ -42,3 +42,5 @@ interface Image {
 // const book2: Book = {
     
 // }
+
+// Phân biệt interface và type alias
