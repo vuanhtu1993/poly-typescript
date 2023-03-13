@@ -27,19 +27,19 @@ var func2 = function () {
 var func3 = function () {
 };
 // 5. Callback
-function we17317_map(arr, callback) {
-    var temp = [];
-    for (var i = 0; i < arr.length; i++) {
-        var newItem = callback(arr[i]);
-        temp.push(newItem);
-    }
-    return temp;
-}
+// function we17317_map(arr: any[], callback?: (item: any) => any) {
+//     const temp = []
+//     for(let i = 0; i < arr.length; i++) {
+//         const newItem = callback(arr[i])
+//         temp.push(newItem)
+//     }
+//     return temp
+// }
 var numberArr = ["string", "string1", "string2"];
-var result1 = we17317_map(numberArr, function (item) {
-    return item * 3;
-});
-console.log(result1);
+// const result1 = we17317_map(numberArr, (item) => {
+//     return item * 3
+// })
+// console.log(result1);
 // 6. Rest Parameter
 var showClass = function (name) {
     var classes = [];
