@@ -15,3 +15,27 @@ var ROLE;
     ROLE[ROLE["MANAGER"] = 1] = "MANAGER";
     ROLE[ROLE["USER"] = 2] = "USER";
 })(ROLE || (ROLE = {}));
+// // Properties
+// interface User {
+//     username: string,
+//     password: string,
+//     email: string,
+// }
+// // Methods
+// interface User {
+//     login: () => void,
+//     logout: () => void
+// }
+// interface Admin extends User {
+//     role: ROLE.MANAGER | ROLE.STAFF
+// }
+// type User = {
+//     username: string,
+//     password: string,
+//     email: string,
+//     login: () => void,
+//     logout: () => void,
+// }
+// type Admin = User & {
+//     role: ROLE.MANAGER | ROLE.STAFF
+// }
