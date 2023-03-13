@@ -10,7 +10,9 @@ interface Book {
     authors: {id: number, name: string, slug:string}[],
     book_cover: string,
     categories: {id: number, name: string, is_leaf: boolean},
-    current_seller: Seller
+    current_seller: Seller[],
+    description: string,
+    images: Image[]
 }
 
 interface Seller {
@@ -26,8 +28,41 @@ interface Seller {
     is_offline_installment_supported?: string
 }
 
-let book: Book;
+// Type alias
+type Image = {
+    base_url: string,
+    is_gallery: boolean,
+    label: string
+}
 
-let book2: Book;
+type User = {
+    username: string,
+    password: string,
+    email: string
+}
 
-let seller: Seller;
+enum ROLE {STAFF, MANAGER}
+
+type Admin = User & {
+    is_admin: boolean,
+    role: ROLE.STAFF | ROLE.MANAGER
+}
+
+// Properties
+// interface User {
+//     username: string,
+//     password: string,
+//     email: string,
+// }
+// // Methods
+// interface User {
+//     login: () => void,
+//     logout: () => void
+// }
+
+// enum ROLE {STAFF, MANAGER}
+
+// interface Admin extends User {
+//     is_admin: boolean,
+//     role: ROLE.STAFF | ROLE.MANAGER
+// }

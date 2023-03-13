@@ -4,6 +4,24 @@ var obj = {
     age: 20,
     hometown: "Hà Nội"
 };
-var book;
-var book2;
-var seller;
+var ROLE;
+(function (ROLE) {
+    ROLE[ROLE["STAFF"] = 0] = "STAFF";
+    ROLE[ROLE["MANAGER"] = 1] = "MANAGER";
+})(ROLE || (ROLE = {}));
+// Properties
+// interface User {
+//     username: string,
+//     password: string,
+//     email: string,
+// }
+// // Methods
+// interface User {
+//     login: () => void,
+//     logout: () => void
+// }
+// enum ROLE {STAFF, MANAGER}
+// interface Admin extends User {
+//     is_admin: boolean,
+//     role: ROLE.STAFF | ROLE.MANAGER
+// }
