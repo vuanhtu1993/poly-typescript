@@ -1,12 +1,12 @@
 // Array
-var arr = ["a", "1", "false"];
+const arr = ["a", "1", "false"];
 // Nested Array
-var arr3 = [["a", "b", "c"], ["d", "e", "f"]];
-var arr5 = ["d", "e", "f"];
+const arr3 = [["a", "b", "c"], ["d", "e", "f"]];
+const arr5 = ["d", "e", "f"];
 // Tuple
-var arr2 = ["a", 1, true];
+const arr2 = ["a", 1, true];
 console.log(typeof arr2);
-var arr4 = [["a", 1, true], ["b", 2, true]];
+const arr4 = [["a", 1, true], ["b", 2, true]];
 // Enum
 var STATUS;
 (function (STATUS) {
@@ -14,7 +14,7 @@ var STATUS;
     STATUS[STATUS["REJECTED"] = 1] = "REJECTED";
     STATUS[STATUS["FULFILLED"] = 2] = "FULFILLED";
 })(STATUS || (STATUS = {}));
-var trangthai = STATUS.FULFILLED;
+const trangthai = STATUS.FULFILLED;
 // console.log(trangthai);
 var CODE;
 (function (CODE) {

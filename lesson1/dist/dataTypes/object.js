@@ -1,5 +1,5 @@
 // Object
-var obj = {
+const obj = {
     name: "Bình",
     age: 20,
     hometown: "Hà Nội"

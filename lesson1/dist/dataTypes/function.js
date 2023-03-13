@@ -5,13 +5,13 @@ function demoFunc() {
 }
 // never
 function neverFunc() {
-    var error = new Error("Có lỗi xảy ra");
+    const error = new Error("Có lỗi xảy ra");
     throw error;
 }
-var result = demoFunc();
+const result = demoFunc();
 // console.log(result);
 // 2. Function parammeter
-var showInfo = function (firstName, lastName, midName) {
+const showInfo = (firstName, lastName, midName) => {
     return "Tên sinh vien: " + firstName + " " + midName + " " + lastName;
 };
 // console.log(sum(10, 20));
@@ -22,9 +22,9 @@ function sum(a, b) {
 // 3. Optional ?
 // console.log(showInfo("Nguyễn", "Bảo", "Bằng"));
 // 4. Function declaration
-var func2 = function () {
+const func2 = function () {
 };
-var func3 = function () {
+const func3 = () => {
 };
 // 5. Callback
 // function we17317_map(arr: any[], callback?: (item: any) => any) {
@@ -35,17 +35,13 @@ var func3 = function () {
 //     }
 //     return temp
 // }
-var numberArr = ["string", "string1", "string2"];
+const numberArr = ["string", "string1", "string2"];
 // const result1 = we17317_map(numberArr, (item) => {
 //     return item * 3
 // })
 // console.log(result1);
 // 6. Rest Parameter
-var showClass = function (name) {
-    var classes = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        classes[_i - 1] = arguments[_i];
-    }
-    console.log("Sinh vi\u00EAn ".concat(name, " h\u1ECDc l\u1EDBp ").concat(classes.join(", ")));
+const showClass = function (name, ...classes) {
+    console.log(`Sinh viên ${name} học lớp ${classes.join(", ")}`);
 };
 showClass("Văn Anh", "Nodejs", "Typescript");

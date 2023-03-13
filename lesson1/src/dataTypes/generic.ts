@@ -39,4 +39,20 @@ const result2 = we17317_map(numArray2, (item, index) => {
     return item + "-we17317" + " " + index
 })
 
-console.log(result2);
+// console.log(result2);
+const BookPage = async function() {
+    const books = await (await fetch('http://localhost:3000/books')).json()
+    console.log(books[0]);
+    return /**/`
+        ${books.map(book => /*html*/`
+            <div>
+                <h2>${book.name}</h2>
+                <img src="${book.images[0].base_url}" />
+            </div>
+        `)}
+    `
+}
+
+const app = document.querySelector<HTMLElement>("#app")
+app.innerHTML = await BookPage()
+

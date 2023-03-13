@@ -1,12 +1,12 @@
 // String
-var str = "Hello world";
+let str = "Hello world";
 // Number
-var num = 10 / 3;
+const num = 10 / 3;
 // Boolean
 // const trangthai: boolean = false // 1 > 3
 // null/undefined
-var ducanh = "Duc Anh";
+let ducanh = "Duc Anh";
 ducanh = null;
-var str2 = "";
-var num2;
-var str3 = 10;
+const str2 = "";
+let num2;
+let str3 = 10;
