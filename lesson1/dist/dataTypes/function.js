@@ -51,20 +51,20 @@ var showClasses = function (name) {
 console.log(showClasses("Anh Ngọc", "Typescript", "Nodejs"));
 console.log(showClasses("Hào", "Typescript"));
 // 5. Callback
-var num_arr = [5, 6, 7];
-var temp = num_arr.map(function (item, index) {
-    return item * 2;
-});
+// const num_arr = [5,6,7]
+// const temp = num_arr.map((item, index) => {
+//     return item * 2
+// })
 // console.log(temp);
-var we17304_map = function (arr, callback) {
-    var temp = [];
-    for (var i = 0; i < arr.length; i++) {
-        var newItem = callback(arr[i]);
-        temp.push(newItem);
-    }
-    return temp;
-};
-var result = we17304_map(num_arr, function (item) {
-    return item * item;
-});
-console.log(result);
+// const we17304_map = function(arr: number[], callback?: (item: number) => number) {
+//     const temp = []
+//     for(let i = 0; i < arr.length; i++) {
+//         const newItem = callback(arr[i])
+//         temp.push(newItem)
+//     }
+//     return temp;
+// }
+// const result = we17304_map(num_arr, (item) => {
+//     return item * item
+// })
+// console.log(result);
