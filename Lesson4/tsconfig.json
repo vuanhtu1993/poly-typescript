@@ -4,6 +4,5 @@
         "outDir": "dist",
         "watch": true
     },
-    "include": ["src"],
-    "exclude": ["src/styles"]
+    "include": ["src"]
 }
