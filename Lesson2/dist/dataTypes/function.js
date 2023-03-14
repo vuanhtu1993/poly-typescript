@@ -43,20 +43,19 @@ function printClass(name) {
 }
 console.log(printClass("Hưng", "Typescript", "Nodejs", "Phap Luat"));
 // 5. Callback
-var numArr = [1, 2, 3, 5, 8, 13]; // Fibonacci
+// const numArr = [1,2,3,5,8,13] // Fibonacci
 // const result = numArr.map((item) => {
 //     return item * item
 // })
 // console.log(result);
-var we17307_map = function (arr, callback) {
-    var temp = [];
-    for (var i = 0; i < arr.length; i++) {
-        var newItem = callback(arr[i]);
-        temp.push(newItem);
-    }
-    return temp;
-};
-var result = we17307_map(numArr, function (item) {
-    return item * item;
-});
-console.log(result);
+// const we17307_map = function(arr: number[], callback?: (item: number) => number): number[] {
+//     const temp = []
+//     for(let i = 0; i < arr.length; i++) {
+//         const newItem = callback(arr[i])
+//         temp.push(newItem)
+//     }
+//     return temp
+// }
+// const result = we17307_map(numArr, (item) => {
+//     return item * item
+// })
