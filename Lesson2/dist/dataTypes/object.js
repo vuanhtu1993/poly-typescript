@@ -1,17 +1,12 @@
-// Object declaration
-var sinhvien = {
-    name: "Tài",
-    grade: 5,
-    age: 20,
-    hometown: "Thái Bình"
-};
-var sinhvien2 = {
-    name: "Thanh",
-    grade: 5,
-    age: 20,
-    hometown: "Nam Định"
-};
-// const book1: Book = {
+// Interface
+// interface User {
+//     id: number,
+//     username: string,
+//     password: string,
+//     email: string,
 // }
-// const book2: Book = {
-// }
+var LEVEL;
+(function (LEVEL) {
+    LEVEL[LEVEL["MANAGER"] = 0] = "MANAGER";
+    LEVEL[LEVEL["STAFF"] = 1] = "STAFF";
+})(LEVEL || (LEVEL = {}));
