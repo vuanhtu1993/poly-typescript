@@ -14,3 +14,14 @@ var sinhvien2 = {
         return "";
     }
 };
+// Differences type aliases / interface
+// interface User {
+//     username: string,
+//     password: string,
+//     email: string
+// }
+var LEVEL;
+(function (LEVEL) {
+    LEVEL[LEVEL["STAFF"] = 0] = "STAFF";
+    LEVEL[LEVEL["MANAGER"] = 1] = "MANAGER";
+})(LEVEL || (LEVEL = {}));
