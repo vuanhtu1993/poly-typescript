@@ -24,7 +24,10 @@ const showInfo = (firstName: string, lastName:string, midName?: string): string 
 
 // Hoisting
 function sum(a: number, b?: number): number {
-    return a + b
+    if (b) {
+        return a + b
+    }
+    return a
 }
 
 // 3. Optional ?

@@ -9,7 +9,7 @@ const num: number = 10/3
 
 // null/undefined
 let ducanh = "Duc Anh";
-ducanh = null
+// ducanh = null
 
 const str2: string | null = ""
 

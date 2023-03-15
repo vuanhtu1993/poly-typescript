@@ -17,7 +17,10 @@ const showInfo = (firstName, lastName, midName) => {
 // console.log(sum(10, 20));
 // Hoisting
 function sum(a, b) {
-    return a + b;
+    if (b) {
+        return a + b;
+    }
+    return a;
 }
 // 3. Optional ?
 // console.log(showInfo("Nguyễn", "Bảo", "Bằng"));
