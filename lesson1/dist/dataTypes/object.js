@@ -4,11 +4,22 @@ const obj = {
     age: 20,
     hometown: "Hà Nội"
 };
-var ROLE;
-(function (ROLE) {
-    ROLE[ROLE["STAFF"] = 0] = "STAFF";
-    ROLE[ROLE["MANAGER"] = 1] = "MANAGER";
-})(ROLE || (ROLE = {}));
+// Type alias
+// type Image = {
+//     base_url: string,
+//     is_gallery: boolean,
+//     label: string
+// }
+// type User = {
+//     username: string,
+//     password: string,
+//     email: string
+// }
+// enum ROLE {STAFF, MANAGER}
+// type Admin = User & {
+//     is_admin: boolean,
+//     role: ROLE.STAFF | ROLE.MANAGER
+// }
 // Properties
 // interface User {
 //     username: string,

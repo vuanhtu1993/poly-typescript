@@ -1,8 +1,9 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "esnext",
         "outDir": "dist", //Output directory,
-        "watch": true
+        "watch": true,
+        "strictNullChecks": true
     },
     "include": ["src"]
 }
