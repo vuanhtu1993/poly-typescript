@@ -15,7 +15,6 @@ function optionalFunc(sinhvien?: {name: string, age: number}) {
 }
 
 optionalFunc()
-
 // 3. in
 
 interface User {

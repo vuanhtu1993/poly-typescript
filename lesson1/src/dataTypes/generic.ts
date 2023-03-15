@@ -26,33 +26,40 @@ function showData<T>(a: T): T {
 
 // showData<boolean>("string")
 
-function we17317_map<T>(arr: T[], callback: (item: T, index: number) => T): T[] {
-    let temp = []
-    for(let i = 0; i < arr.length; i++) {
-        const newItem = callback(arr[i], i)
-        temp.push(newItem)
-    }
-    return temp
-}
+// function we17317_map<T>(arr: T[], callback: (item: T, index: number) => T): T[] {
+//     let temp = []
+//     for(let i = 0; i < arr.length; i++) {
+//         const newItem = callback(arr[i], i)
+//         temp.push(newItem)
+//     }
+//     return temp
+// }
 
-const result2 = we17317_map(numArray2, (item, index) => {
-    return item + "-we17317" + " " + index
+// const result2 = we17317_map(numArray2, (item, index) => {
+//     return item + "-we17317" + " " + index
+// })
+
+
+const numArray3 = [13,5,8,2,3,1] 
+
+numArray3.sort((a, b) => {
+    // return a - b
+    return a - b
 })
 
-// console.log(result2);
-const BookPage = async function() {
-    const books = await (await fetch('http://localhost:3000/books')).json()
-    console.log(books[0]);
-    return /**/`
-        ${books.map(book => /*html*/`
-            <div>
-                <h2>${book.name}</h2>
-                <img src="${book.images[0].base_url}" />
-            </div>
-        `)}
-    `
+// console.log(numArray3);
+function selectionSort(arr) {
+    for(let i = 0; i < arr.length - 1; i++) {
+        for(let j = i + 1; j < arr.length; j++) {
+            if(arr[i] > arr[j]) {
+                let temp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = temp
+            }
+        }
+    }
 }
 
-const app = document.querySelector<HTMLElement>("#app")
-app.innerHTML = await BookPage()
+selectionSort(numArray3)
+console.log(numArray3);
 

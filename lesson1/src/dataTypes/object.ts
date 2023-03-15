@@ -12,7 +12,7 @@ interface Book {
     categories: {id: number, name: string, is_leaf: boolean},
     current_seller: Seller[],
     description: string,
-    images: Image[]
+    // images: Image[]
 }
 
 interface Seller {
