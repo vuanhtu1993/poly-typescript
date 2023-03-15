@@ -13,7 +13,7 @@ function showData<T>(a: T): T {
 showData<number>(10)
 
 const numArr = [1,2,3,4,5,6,7,8]
-const stringArr = ["Trinh", "Ly", "Bich"]
+const stringArr = ["A", "B", "C"]
 // const result = numArr.map(item => {
 //     return item * item
 // })
