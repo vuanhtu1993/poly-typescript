@@ -48,3 +48,27 @@ function login(user: User | Admin): void {
         console.log("Welcome to backs");
     }
 }
+
+const numArr2 = [5,3,9, 2,4,1]
+const strArr = ["hải", "bhịnh", "ahắng", "phi"]
+
+numArr2.sort((a, b) => {
+    return b - a
+})
+console.log(numArr2);
+
+function bubbleSort(arr: string[]): void {
+    for(let i = 0; i < arr.length - 1; i++) {
+        for(let j = i + 1; j < arr.length; j++) {
+            if (arr[i] > arr[j]) {
+                let temp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = temp
+            }
+        }
+    }
+}
+
+bubbleSort(strArr)
+console.log(strArr);
+
