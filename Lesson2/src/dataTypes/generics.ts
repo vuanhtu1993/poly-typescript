@@ -19,7 +19,7 @@ const stringArr = ["A", "B", "C"]
 // })
 
 const we17307_map = <T>(arr: T[], callback: (item: T, index: number) => T): T[] => {
-    let temp = []
+    let temp: T[] = []
     for(let i = 0; i < arr.length; i++) {
         const newItem = callback(arr[i], i)
         temp.push(newItem)

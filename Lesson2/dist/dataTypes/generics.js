@@ -9,20 +9,20 @@ function showData(a) {
     return a;
 }
 showData(10);
-var numArr = [1, 2, 3, 4, 5, 6, 7, 8];
-var stringArr = ["Trinh", "Ly", "Bich"];
+const numArr = [1, 2, 3, 4, 5, 6, 7, 8];
+const stringArr = ["A", "B", "C"];
 // const result = numArr.map(item => {
 //     return item * item
 // })
-var we17307_map = function (arr, callback) {
-    var temp = [];
-    for (var i = 0; i < arr.length; i++) {
-        var newItem = callback(arr[i], i);
+const we17307_map = (arr, callback) => {
+    let temp = [];
+    for (let i = 0; i < arr.length; i++) {
+        const newItem = callback(arr[i], i);
         temp.push(newItem);
     }
     return temp;
 };
-var result = we17307_map(stringArr, function (item, index) {
+const result = we17307_map(stringArr, (item, index) => {
     return item + "-we17307" + " " + index;
 });
 console.log(result);

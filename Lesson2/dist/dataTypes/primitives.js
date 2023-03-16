@@ -1,10 +1,10 @@
 // String
-var str = "Hello world";
-var str2 = "string";
+const str = "Hello world";
+let str2 = "string";
 // Number
-var num = 10 / 6;
+const num = 10 / 6;
 // Boolean
-var trangthai = 1 > 2;
+const trangthai = 1 > 2;
 // null/undefined
-var num2;
-console.log(typeof num2);
+let num5 = 10;
+console.log(typeof num5);

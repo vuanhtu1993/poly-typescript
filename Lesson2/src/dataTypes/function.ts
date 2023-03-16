@@ -40,7 +40,7 @@ console.log(divide(10,));
 
 
 const showName = function(): string {
-    return;
+    return "";
 }
 
 // 4. Rest parameter

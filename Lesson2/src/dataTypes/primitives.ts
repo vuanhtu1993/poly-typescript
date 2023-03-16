@@ -9,5 +9,5 @@ const num: number = 10/6
 const trangthai = 1 > 2
 
 // null/undefined
-let num2: number;
-console.log(typeof num2);
+let num5: number = 10;
+console.log(typeof num5);

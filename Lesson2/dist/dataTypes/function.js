@@ -3,43 +3,38 @@ function func1() {
     // Hoisting
     console.log("func1");
 }
-var func2 = function () {
+const func2 = function () {
     console.log("func2");
 };
-var func3 = function () {
+const func3 = () => {
     console.log("func3");
 };
 // 2. Function return
-var num3;
+let num3;
 // function divide(): number {
 //     return;
 // }
 // const showName = function(): string {
 //     return;
 // }
-var func4 = function () {
+const func4 = function () {
     console.log("4");
 };
-var showError = function () {
-    var err = new Error("Something went wrong!");
+const showError = function () {
+    const err = new Error("Something went wrong!");
     throw err;
 };
 // 3. Function parameter
-function divide(a, b) {
-    if (b === void 0) { b = 1; }
+function divide(a, b = 1) {
     return a / b;
 }
 console.log(divide(10));
-var showName = function () {
-    return;
+const showName = function () {
+    return "";
 };
 // 4. Rest parameter
-function printClass(name) {
-    var classes = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        classes[_i - 1] = arguments[_i];
-    }
-    return "Sinh vi\u00EAn ".concat(name, " h\u1ECDc l\u1EDBp ").concat(classes.join(", "));
+function printClass(name, ...classes) {
+    return `Sinh viên ${name} học lớp ${classes.join(", ")}`;
 }
 console.log(printClass("Hưng", "Typescript", "Nodejs", "Phap Luat"));
 // 5. Callback
