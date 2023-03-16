@@ -7,10 +7,11 @@ const products = [
     { name: "San pham 4", price: 400 },
 ]
 const element = <>
-    {products.map(item =>
-        <div>
+    {products.map((item, index) =>
+        <div key={index}>
             <h2>{item.name}</h2>
             <p>{item.price}</p>
+            <button onClick={() => console.log(item.name)}>Magic</button>
         </div>
     )}
 </>;
