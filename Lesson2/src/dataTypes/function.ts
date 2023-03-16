@@ -41,7 +41,7 @@ function sum(a: number, b: number = 0): number {
 
 
 function showName(): string {
-    return;
+    return "";
 }
 
 // 4. Rest parameter

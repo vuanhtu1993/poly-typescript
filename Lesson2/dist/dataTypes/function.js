@@ -32,7 +32,7 @@ function sum(a, b) {
 }
 // console.log(sum(10, -1));
 function showName() {
-    return;
+    return "";
 }
 // 4. Rest parameter
 var showClasses = function (name) {
