@@ -59,18 +59,18 @@ enum LEVEL {STAFF, MANAGER}
 // }
 
 // Properties
-interface User {
-    username: string,
-    password: string,
-    email: string
-}
-// Method
-interface User {
-    login: () => void,
-    logout: () => void
-}
+// interface User {
+//     username: string,
+//     password: string,
+//     email: string
+// }
+// // Method
+// interface User {
+//     login: () => void,
+//     logout: () => void
+// }
 
-type Admin = User & {
-    is_admin: boolean,
-    level: LEVEL.MANAGER | LEVEL.STAFF
-}
+// type Admin = User & {
+//     is_admin: boolean,
+//     level: LEVEL.MANAGER | LEVEL.STAFF
+// }
