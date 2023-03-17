@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.18.6"
+  },
+  "scripts": {
+    "start": "npx babel react.js -w --out-file react-compiled.js"
+  }
+}

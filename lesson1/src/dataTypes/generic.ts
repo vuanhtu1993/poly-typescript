@@ -41,6 +41,7 @@ function showData<T>(a: T): T {
 
 
 const numArray3 = [13,5,8,2,3,1] 
+const strArr = ["b", "c", "d", "a"]
 
 numArray3.sort((a, b) => {
     // return a - b
@@ -48,10 +49,19 @@ numArray3.sort((a, b) => {
 })
 
 // console.log(numArray3);
-function selectionSort(arr) {
+function selectionSort<T>(arr: T[], callback?: (a: T, b: T) => number) {
+    if (!callback) {
+        callback = (a: T, b: T): number => {
+            if (a > b) {
+                return 1
+            } else {
+                return -1
+            }
+        }
+    }
     for(let i = 0; i < arr.length - 1; i++) {
         for(let j = i + 1; j < arr.length; j++) {
-            if(arr[i] > arr[j]) {
+            if(callback(arr[i], arr[j]) > 0) {
                 let temp = arr[i]
                 arr[i] = arr[j]
                 arr[j] = temp
@@ -60,6 +70,8 @@ function selectionSort(arr) {
     }
 }
 
-selectionSort(numArray3)
-console.log(numArray3);
+selectionSort(strArr, (a, b) => {
+    return a.localeCompare(b)
+})
+console.log(strArr);
 
