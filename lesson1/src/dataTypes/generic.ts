@@ -40,26 +40,54 @@ const arrStr = ["Quang","Quy","Hau","Duc"] //Fibonacci
 
 // console.log(result);
 
-const arrNum2 = [13,1,3,5,8,2] //Fibonacci
-const arrStr2 = ["b", "cb", "ab", "e"]
-arrNum2.sort((a, b) => {
-    return b - a
-})
+// const arrNum2 = [13,1,3,5,8,2] //Fibonacci
+// const arrStr2 = ["b", "cb", "ab", "e"]
+// arrNum2.sort((a, b) => {
+//     return b - a
+// })
 
-// console.log(arrNum2);
+// // console.log(arrNum2);
 
-function selectionSort(arr) {
-    for(let i = 0; i < arr.length - 1; i ++) {
-        for(let j = i + 1; j < arr.length; j++) {
-            if (arr[i] < arr[j]) {
-                let temp = arr[i]
-                arr[i] = arr[j]
-                arr[j] = temp
+// function selectionSort(arr) {
+//     for(let i = 0; i < arr.length - 1; i ++) {
+//         for(let j = i + 1; j < arr.length; j++) {
+//             if (arr[i] < arr[j]) {
+//                 let temp = arr[i]
+//                 arr[i] = arr[j]
+//                 arr[j] = temp
+//             }
+//         }
+//     }
+// }
+
+// selectionSort(arrStr2)
+// console.log(arrStr2);
+
+const arrNumber = [209, 43, 53, 534]
+function ascendingOrder(a: number, b: number): number {
+    return a - b;
+}
+const sapxep = function <T>(arr: T[], callback?: (a: T, b: T) => number): T[] {
+    if(!callback) {
+        callback = (a: T, b: T): number => {
+            if(a > b) {
+                return 1
+            } else {
+                return -1
             }
         }
     }
+    const len = arr.length;
+    for (let i = 0; i < len - 1; i++) {
+        for (let j = i + 1; j < len; j++) {
+            if (callback(arr[j], arr[i]) < 0) {
+                [arr[j], arr[i]] = [arr[i], arr[j]]
+            }
+        }
+    }
+    return arr
 }
 
-selectionSort(arrStr2)
-console.log(arrStr2);
+sapxep(arrNum);
+console.log(arrNum);
 
