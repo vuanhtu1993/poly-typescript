@@ -13,7 +13,8 @@ const App = () => {
         console.log("xxx")
     }
     return <>
-        <span style={{color: "red"}}>Parent</span>
+        {user.age}
+        <span className="text-red-500">Parent</span>
         <Avatar user={user} age={20} showInfo={showInfo}/>
     </>
 }
