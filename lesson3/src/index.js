@@ -7,3 +7,10 @@ const root = document.querySelector("#root")
 const reactRoot = ReactDOM.createRoot(root)
 // Bước 4: Render
 reactRoot.render(<App/>)
+
+
+// Bước1: npm install -g create-react-app
+// Bước 2: npx create-react-app <tên folder>
+// Bước 3: cd <tên folder>
+// Bước 4: Nếu chưa có node_modules -> npm i
+// Bước 5: npm start
