@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@babel/preset-react": "^7.18.6"
+  },
+  "scripts": {
+    "compile": "npx babel react.js -w -o react-compile.js"
+  }
+}
