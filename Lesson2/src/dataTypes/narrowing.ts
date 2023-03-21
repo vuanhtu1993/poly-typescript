@@ -52,15 +52,24 @@ function login(user: User | Admin): void {
 const numArr2 = [5,3,9, 2,4,1]
 const strArr = ["hải", "bhịnh", "ahắng", "phi"]
 
-numArr2.sort((a, b) => {
-    return b - a
-})
-console.log(numArr2);
+// numArr2.sort((a, b) => {
+//     return b - a
+// })
+// console.log(numArr2);
 
-function bubbleSort(arr: string[]): void {
+function bubbleSort<T>(arr: T[], callback?: (a:T, b:T) => number): void {
+    if(!callback) {
+        callback = (a: T, b: T) => {
+            if(a > b) {
+                return 1
+            } else {
+                return -1
+            }
+        }
+    }
     for(let i = 0; i < arr.length - 1; i++) {
         for(let j = i + 1; j < arr.length; j++) {
-            if (arr[i] > arr[j]) {
+            if (callback(arr[i], arr[j]) > 0) {
                 let temp = arr[i]
                 arr[i] = arr[j]
                 arr[j] = temp
@@ -69,6 +78,9 @@ function bubbleSort(arr: string[]): void {
     }
 }
 
-bubbleSort(strArr)
+bubbleSort(strArr, (a, b) => {
+    return b.localeCompare(a)
+})
+
 console.log(strArr);
 

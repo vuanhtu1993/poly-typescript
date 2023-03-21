@@ -29,4 +29,6 @@ const element = products.map(item => /*#__PURE__*/React.createElement("tr", null
 reactRoot.render(element);
 
 // Cai dat babel
+// npm install -g @babel/core @babel/cli
 // npm install --save-dev @babel/preset-react
+// npx babel <ten file> -w -o <ten file>
