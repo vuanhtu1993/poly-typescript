@@ -1,3 +1,8 @@
+// Cai dat babel
+// Bước 1: npm install -g @babel/core @babel/cli
+// Bước 2: npm install @babel/preset-react
+// Bước 3: npx babel <ten file> -w -o <ten file>
+
 const products = [
     {id: 1, name: "San pham 1", price: 100},
     {id: 2, name: "San pham 2", price: 100},
