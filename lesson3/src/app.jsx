@@ -3,7 +3,7 @@ import Avatar from "./components/avatar"
 
 // Props: Là một đối tượng, truyền dữ liệu từ component cha xuống component con
 // Imutable
-// State: Trạng thái của component - Bộ nhớ
+// State: Trạng thái - Bộ nhớ của component, Quyết định component được hiển thị như thế nào
 
 const App = () => {
     const [counter, setCounter] = useState(10)
