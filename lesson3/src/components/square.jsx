@@ -1,12 +1,15 @@
-import {useState} from 'react'
+import { useState } from 'react'
 
-const Square = () => {
-    const [value, setValue] = useState()
-    function play() {
-        setValue("X")
+const Square = ({ value, position, handlePlay }) => {
+    const handleSquarePlay = () => {
+        if (!value) {
+            handlePlay(position)
+        }
     }
     return <>
-    <button onClick={play} className="h-[50px] w-[50px] text-xl text-black border-0 bg-gray-300">
+        <button
+            onClick={handleSquarePlay}
+            className="h-[50px] w-[50px] text-xl text-white border-0 bg-[#14bdac]">
             {value}
         </button>
     </>
