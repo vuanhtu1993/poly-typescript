@@ -1,19 +1,19 @@
+import { useState } from "react";
 import Avatar from "./components/avatar";
 
 // Props: Là một đối tượng, truyền dữ liệu từ cha xuống con
 // Props: Immuatable
 const App = function () {
-    const users = {
-        name: "Vu Anh Tu",
-        role: "Project manager"
+    // let count = 10
+    const [count, setCount] = useState(0)
+    const handleIncrease = () => {
+        setCount(count + 1)
+        // console.log(count);
     }
-    return <>
-        <h1>Hello world</h1>
-        <h2>{users.name}</h2>
-        {/* Declaration */}
-        {/* {users.map(user => <Avatar name={user.name} role={user.role}/>)} */}
-        <Avatar name={users.name} role={users.role}/>
-    </>
+    return <div className="h-[100vh] flex justify-center items-center">
+        count: {count}
+        <button className="border bg-red-300" onClick={handleIncrease}>Increase</button>
+    </div>
 }
 
 export default App;
