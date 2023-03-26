@@ -1,6 +1,6 @@
 // Bước 1: import react
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import App from './app'
 // Bước 2: Khai báo DOM
 const root = document.querySelector("#root")

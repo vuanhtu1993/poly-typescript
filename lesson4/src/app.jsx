@@ -9,15 +9,7 @@ const App = function () {
 
     return <div className="h-[100vh] flex justify-center items-center">
         <Board>
-            <Square />
-            <Square />
-            <Square />
-            <Square />
-            <Square />
-            <Square />
-            <Square />
-            <Square />
-            <Square />
+            
         </Board>
     </div>
 }

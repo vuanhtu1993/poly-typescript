@@ -1,13 +1,15 @@
 import { useState } from 'react'
 
-const Square = () => {
-    const [value, setValue] = useState(null)
+const Square = ({value, handlePlay}) => {
 
-    const handlePlay = () => {
-        setValue("X")
+    const squareHandlePlay = () => {
+        if (!value) {
+            handlePlay()
+        }
     }
+
     return <button
-        onClick={handlePlay}
+        onClick={squareHandlePlay}
         className="bg-[#14bdac] border-0 w-[100px] h-[100px] text-[50px] text-white">
         {value}
     </button>
