@@ -14,15 +14,14 @@ const Counter = () => {
 
     
 
-    useEffect(() => {
-        handleShowImage()
-        // const interval = setInterval(() => {
-        //     setCounter(counter + 1)
-        // }, 1000)
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         handleShowImage()
+    //     }, 1000)
 
-        // return () => clearInterval(interval)
-    }, [counter]) // Chứa các tham số mà useEffect phụ thuộc
-    console.log(counter);
+    //     return () => clearInterval(interval)
+    // }, [counter]) // Chứa các tham số mà useEffect phụ thuộc
+    // console.log(counter);
 
     return <>
         <h1>Counter: {counter}</h1>

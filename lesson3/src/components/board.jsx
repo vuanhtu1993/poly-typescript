@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Square from './square'
 
 const Board = ({ children }) => {
     const [game, setGame] = useState([null, null, null, null, null, null, null, null, null])
     const [player, setPlayer] = useState(true)
+    const [timer, setTimer] = useState(3) 
 
     const handlePlay = (position) => {
         const newGame = game.map((g, index) => {
@@ -15,6 +16,15 @@ const Board = ({ children }) => {
         setGame(newGame)
         setPlayer(!player)
     }
+
+    const handleAutoPlay = () => {
+        const emptyGame = game.map((square, index) => square ? null : index).filter(item => item != null)
+        const position = emptyGame[Math.floor(Math.random()*emptyGame.length)];
+        handlePlay(position)
+        setTimer(3)
+    }
+
+    
 
     const listWinner = [
         [0,1,2], [0,4,8]
@@ -30,8 +40,25 @@ const Board = ({ children }) => {
         return null
     }
 
+    useEffect(() => {
+        if (timer < 0) {
+            handleAutoPlay()
+        }
+
+        const interval = setInterval(() => {
+            setTimer(timer - 1)
+        }, 1000)
+
+        return () => clearInterval(interval)
+    }, [timer])
+
+    // handleAutoPlay()
+
     return <>
+    <div>
     <h2>Winner is: {checkWinner()}</h2>
+    <h2>Timer: {timer}</h2>
+    </div>
     <div className="grid grid-cols-3 gap-2 w-[240px]">
         <Square value={game[0]} position={0} handlePlay={handlePlay}/>
         <Square value={game[1]} position={1} handlePlay={handlePlay}/>
