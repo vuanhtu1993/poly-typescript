@@ -2,6 +2,7 @@ import { useState } from "react"
 import Avatar from "./components/avatar"
 import Square from "./components/square"
 import Board from "./components/board"
+import UseEffectComponent from "./components/useEffect"
 
 // Props: Là một đối tượng, truyền dữ liệu từ component cha xuống component con
 // Imutable
@@ -10,9 +11,7 @@ import Board from "./components/board"
 const App = () => {
 
     return <div className="h-[100vh] flex justify-center items-center">
-        <Board>
-            
-        </Board>
+        <Board/>
     </div>
 }
 
