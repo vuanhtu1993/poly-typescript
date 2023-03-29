@@ -7,7 +7,7 @@ const Board = ({ children }) => {
     const [timer, setTimer] = useState(3)
 
     const handlePlay = (position) => {
-        console.log(position);
+        // console.log(position);
         const newGame = game.map((i, index) => {
             if (index === position) {
                 return player ? "X" : "O"
@@ -16,6 +16,13 @@ const Board = ({ children }) => {
         })
         setGame(newGame)
         setPlayer(!player)
+    }
+
+    const handleAutoPlay = () => {
+     const emptyGame = game.map((square, index) => square ? null : index).filter(item => item != null)
+     const position = emptyGame[Math.floor(Math.random()*emptyGame.length)];
+    //  console.log(position);
+     handlePlay(position)
     }
 
     const winList = [
@@ -33,7 +40,9 @@ const Board = ({ children }) => {
     }
 
     useEffect(() => {
+        // handleAutoPlay()
         if (timer < 0) {
+            handleAutoPlay()
             setTimer(3)
         }
         // Asynchronous
@@ -44,7 +53,7 @@ const Board = ({ children }) => {
         return () => clearInterval(interval)
     }, [timer])
 
-    console.log(timer);
+    // handleAutoPlay()
 
     return <>
         <div>
