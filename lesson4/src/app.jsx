@@ -9,7 +9,7 @@ import Counter from "./components/counter"
 // State: Trạng thái (bộ nhớ) của component - Cho phép component thay đổi khi tương tác
 const App = () => {
     return <div className="flex justify-center items-center h-[100vh]">
-        <Counter/>
+        <Board/>
     </div>
 }
 
