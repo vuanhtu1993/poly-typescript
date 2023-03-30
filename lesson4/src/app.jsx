@@ -9,7 +9,7 @@ import Counter from "./components/counter";
 const App = function () {
 
     return <div className="h-[100vh] flex justify-center items-center">
-        <Counter/>
+        <Board/>
     </div>
 }
 
