@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import { IProduct } from "../models"
 
 type Props = {
@@ -5,7 +6,7 @@ type Props = {
 }
 
 const Product = ({data}: Props) => {
-    return <a href="#" className="block">
+    return <Link to={`product/${data.id}`} className="block">
     <img
       alt="Art"
       src={data?.images[0].base_url}
@@ -19,7 +20,7 @@ const Product = ({data}: Props) => {
     <p className="mt-2 max-w-sm text-gray-700">
       {data.description.substring(0, 40)}
     </p>
-  </a>
+  </Link>
   
 }
 
