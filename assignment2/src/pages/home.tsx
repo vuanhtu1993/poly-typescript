@@ -7,7 +7,7 @@ const Home = () => {
     const [products, setProducts] = useState<IProduct[]>([])
 
     const fetchProducts = async () => {
-        const {data} = await getAll()
+        const { data } = await getAll()
         setProducts(data)
     }
 
@@ -17,7 +17,11 @@ const Home = () => {
     return <div>
         <h1>Sản phẩm nổi bật</h1>
         <div className="grid grid-cols-4 gap-3">
-            {products.map(product => <Product/>)}
+            {products.map(product =>
+                <Product
+                    data={product}
+                    key={product.id} />)
+            }
         </div>
     </div>
 }
