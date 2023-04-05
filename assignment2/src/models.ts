@@ -33,3 +33,11 @@ export const signupSchema = Yup.object({
 })
 
 export type SignupForm = Yup.InferType<typeof signupSchema>
+
+export const signinSchema = Yup.object({
+    email: Yup.string().email("Email sai định dạng").required("Trường dữ liệu bắt buộc"),
+    password: Yup.string().min(6).required("Trường dữ liệu bắt buộc"),
+    role: Yup.number()
+})
+
+export type SigninForm = Yup.InferType<typeof signinSchema>

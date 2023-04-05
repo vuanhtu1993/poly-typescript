@@ -7,6 +7,15 @@
       "lastName": "Anh Tú",
       "confirmPassword": "123456",
       "id": 1
+    },
+    {
+      "email": "tuva10@fpt.edu.vn",
+      "password": "$2a$10$kKG.Iu4/ikK5z6LrMzhp5OHHM1izniZ5dichEvSoWIS5hRVh/qTf2",
+      "firstName": "Vũ",
+      "lastName": "Anh Tú",
+      "confirmPassword": "123456",
+      "role": 1,
+      "id": 2
     }
   ],
   "products": [

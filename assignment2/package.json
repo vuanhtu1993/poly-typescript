@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "concurrently \"vite\" \"json-server-auth db.json\"",
+    "start": "concurrently \"vite\" \"json-server-auth --watch db.json\"",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },

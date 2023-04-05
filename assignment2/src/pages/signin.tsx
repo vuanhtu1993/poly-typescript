@@ -8,23 +8,33 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup';
 import {useNavigate} from 'react-router-dom'
 import * as Yup from 'yup'
-import { SignupForm, signupSchema } from '../models';
-import { signup } from '../api/auth';
+import { SigninForm, SignupForm, signinSchema, signupSchema } from '../models';
+import { signin, signup } from '../api/auth';
+import { useLocalStorage } from '../hooks';
 
 
-
-const Signup = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm<SignupForm>({
-        resolver: yupResolver(signupSchema)
+const Signin = () => {
+    const { register, handleSubmit, formState: { errors } } = useForm<SigninForm>({
+        resolver: yupResolver(signinSchema)
     })
 
     const navigate = useNavigate()
 
-    const onSubmit = async (data: SignupForm) => {
+    const [user, setUser] = useLocalStorage("user", null)
+
+    const onSubmit = async (data: SigninForm) => {
         try {
-            const response = await signup(data)
-            console.log(response);
-            navigate('/signin')
+            const {data: {accessToken, user}} = await signin(data)
+            
+            setUser({
+                accessToken,
+                ...user
+            })
+            if (user.role) {
+                navigate('/admin')
+            } else {
+                navigate('/')
+            }
             
         }catch(err) {
             console.log(err);
@@ -67,40 +77,6 @@ const Signup = () => {
                     </p>
 
                     <form action="#" className="mt-8 grid grid-cols-6 gap-6" onSubmit={handleSubmit(onSubmit)}>
-                        <div className="col-span-6 sm:col-span-3">
-                            <label
-                                htmlFor="FirstName"
-                                className="block text-sm font-medium text-gray-700"
-                            >
-                                First Name
-                            </label>
-
-                            <input
-                                {...register('firstName')}
-                                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                            />
-                            <p className='text-red-600 text-[10px]'>
-                                {errors.firstName && errors.firstName.message}
-                            </p>
-                        </div>
-
-                        <div className="col-span-6 sm:col-span-3">
-                            <label
-                                htmlFor="LastName"
-                                className="block text-sm font-medium text-gray-700"
-                            >
-                                Last Name
-                            </label>
-
-                            <input
-                                {...register('lastName')}
-                                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                            />
-                            <p className='text-red-600 text-[10px]'>
-
-                                {errors.lastName && errors.lastName.message}
-                            </p>
-                        </div>
 
                         <div className="col-span-6">
                             <label htmlFor="Email" className="block text-sm font-medium text-gray-700">
@@ -136,35 +112,12 @@ const Signup = () => {
                             </p>
                         </div>
 
-                        <div className="col-span-6 sm:col-span-3">
-                            <label
-                                htmlFor="PasswordConfirmation"
-                                className="block text-sm font-medium text-gray-700"
-                            >
-                                Password Confirmation
-                            </label>
-
-                            <input
-                                type="password"
-                                {...register('confirmPassword')}
-                                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                            />
-                            <p className='text-red-600 text-[10px]'>
-
-                                {errors.confirmPassword && errors.confirmPassword.message}
-                            </p>
-                        </div>
                         <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                             <button
                                 className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
                             >
-                                Create an account
+                                Đăng nhập
                             </button>
-
-                            <p className="mt-4 text-sm text-gray-500 sm:mt-0">
-                                Already have an account?
-                                <a href="#" className="text-gray-700 underline">Log in</a>.
-                            </p>
                         </div>
                     </form>
                 </div>
@@ -174,4 +127,4 @@ const Signup = () => {
 
 }
 
-export default Signup
+export default Signin
