@@ -1,8 +1,8 @@
 import {Outlet} from 'react-router-dom'
 
-import UserFooter from "./userFooter"
-import UserHeader from "./userHeader"
-import Slider from './slider'
+import UserFooter from "../userFooter"
+import UserHeader from "../userHeader"
+import Slider from '../slider'
 
 const UserLayout = () => {
     return <>
