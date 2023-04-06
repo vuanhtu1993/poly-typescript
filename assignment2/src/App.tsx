@@ -5,7 +5,7 @@ import Home from './pages/home'
 import ProductDetail from './pages/product'
 import Signup from './pages/signup'
 import Signin from './pages/signin'
-import AdminLayout from './components/admin'
+import AdminLayout from './components/layout/admin'
 import Dashboard from './pages/dashboard'
 import ProductUpdate from './pages/product-update'
 
