@@ -1,8 +1,0 @@
-{
-    "students": [
-        {"name": "Nguyen Van A", "age": 20, "grade": 5, "GPA": 7.5 },
-        {"name": "Tran Van B", "age": 20, "grade": 5, "GPA": 6.5 },
-        {"name": "Nguyen Van C", "age": 20, "grade": 5, "GPA": 5.5 },
-        {"name": "Le Thi D", "age": 20, "grade": 5, "GPA": 8.5 }
-    ]
-}
