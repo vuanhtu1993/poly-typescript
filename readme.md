@@ -5,6 +5,11 @@
 <!-- Loi power shell -->
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
+### Homework
+#### 1. Typescript va Javascript giong va khach nhau nhu the nao
+#### 2. Tai sao phai su dung Typescript va phu hop voi nhung du an nao
+#### 3. Cach khai bao va cac kieu du lieu trong typescript
+
 
 ## Buổi 2: Typescript 
 TypeScript is JavaScript with syntax for types.
