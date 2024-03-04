@@ -1,4 +1,12 @@
-### Typescript 
+## Buoi 1: What is typescript-->
+#### What is typescript - typescript roadmap
+#### Cai dat moi truong typescript
+```
+<!-- Loi power shell -->
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+## Buổi 2: Typescript 
 TypeScript is JavaScript with syntax for types.
 TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 
