@@ -3,72 +3,48 @@
 // Number, string, boolean, null, undefined, symbol
 // Non-primitive
 // Object, Array, Function
-
-
 // Datatype trong Typescript
 // Primitive
 // String, number, boolean
 // Anotation type
-let name1: string = "tuva9"
+var name1 = "tuva9";
 // name1 = 100
 // // Inference type
-let name2 = "HoangNguyen"
+var name2 = "HoangNguyen";
 // name2 = 100
-
-let name3: string;
-
+var name3;
 // Object
-const user1: {
-    name: string,
-    age: number,
-    gender: boolean
-} = {
+var user1 = {
     name: "HoangNguyen",
     age: 21,
     gender: true
-}
-
-const user2: {
-    name: string,
-    age: number,
-    gender: boolean
-} = {
+};
+var user2 = {
     name: "DungNguyen",
     age: 21,
     gender: true
-}
-// Interface
-interface User {
-    name: string,
-    age: number,
-    gender: boolean,
-    role: number
-}
-
+};
 // const user3: User = {
 //     name: "PhucLQ",
 //     age: 21,
 //     gender: true
 // }
-
 // Array
-const array1: string[] = ["A", "B", "C", "D"]
-const array2: Array<number> = [1, 2, 3, 4, 5]
-
+var array1 = ["A", "B", "C", "D"];
+var array2 = [1, 2, 3, 4, 5];
 // Enum
 // user3.role = 1 //ADMIN
-enum ROLE {
-    "USER" = 10,
-    "ADMIN",
-    "SUPERADMIN",
-    "SALE"
-}
-
-const user4: User = {
+var ROLE;
+(function (ROLE) {
+    ROLE[ROLE["USER"] = 10] = "USER";
+    ROLE[ROLE["ADMIN"] = 11] = "ADMIN";
+    ROLE[ROLE["SUPERADMIN"] = 12] = "SUPERADMIN";
+    ROLE[ROLE["SALE"] = 13] = "SALE";
+})(ROLE || (ROLE = {}));
+var user4 = {
     name: "HuanHC",
     age: 21,
     gender: true,
     role: ROLE.SUPERADMIN
-}
-
+};
 console.log(user4);
