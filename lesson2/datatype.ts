@@ -14,8 +14,13 @@ let name1: string = "tuva9"
 // // Inference type
 let name2 = "HoangNguyen"
 // name2 = 100
-
 let name3: string;
+// Null undefined
+let var3: string | null; // Union type
+let var4: string | null | undefined | number; // Union type
+var4 = 10
+var4 = "ABC"
+var4 = null
 
 // Object
 const user1: {
@@ -72,3 +77,14 @@ const user4: User = {
 }
 
 console.log(user4);
+
+// Tuple
+const tuple1: [string, number, boolean, number] = ["tuva9", 31, true, ROLE.SUPERADMIN]
+
+// Any
+let var1: any;
+var1 = 10;
+var1 = "string"
+var1 = {
+
+}
