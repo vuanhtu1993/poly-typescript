@@ -1,58 +1,36 @@
-// 1. Primitive types - Nguyên thuỷ
-// 2. Object
-// 3. Others
-// 4. Combining types - Kết hợp
-// Union type
-const name: string = "tuva"
-const result1: string | number = 10
-const result2: string | number | boolean | { status: string, data: {} } = true
-const restult3: any = {}
+// Combining types
+// 1. Union type
+const result: string | null = "success"
+const result2: string | number | boolean | { status: string, code: number } = true
 
-// Intersection types
-const result4: string & number = 10
-const result5: { name: string, age: number } & { role: number } = {
-    name: "VinhNS",
-    age: 21,
-    role: 1
+// 2. Type alias
+type Result = string | number | boolean | { status: string, code: number }
+const result3: Result = 200
+
+// 3. Intersection type
+type NumberString = Result & { data: {} }
+const result4: NumberString = {
+    status: "OK",
+    code: 201,
+    data: {}
 }
 
-type MyString = string
+// Type
 type Car = {
     brand: string,
     name: string,
     year: number,
     engine: string,
-
-}
-
-type CarMove = {
-    move?: () => { coordinatorX: number, coordinatorY: number }
+    move(): { coordinatorX: number, coordinatorY: number }
 }
 
 interface ICar {
     brand: string,
     name: string,
     year: number,
-    engine: string
+    engine: string,
 }
 
 interface ICar {
-    move?: () => { coordinatorX: number, coordinatorY: number }
-}
-
-const car1: Car & CarMove = {
-    brand: "Ford",
-    name: "Everest",
-    year: 2024,
-    engine: "v8",
-}
-
-const car2: ICar = {
-    brand: "Ford",
-    name: "Everest",
-    year: 2024,
-    engine: "v8",
-    move: function () {
-        return {}
-    }
+    move(): { coordinatorX: number, coordinatorY: number }
 }
