@@ -1,13 +1,23 @@
-// const sum = (a, b) => {
-//     return a + b
-// }
+console.log("hello world!!!")
 
-const user = {
-    name: "tuva9",
-    age: 31,
-    role: "lecturer"
+class Animal {
+    constructor(name: string) {
+
+    }
 }
 
-console.log(user.name);
+// Why ts
+// 1. Error check
+const user = {
+    name: "Tuva9",
+    age: 31,
+    role: "IT lecturer",
+}
 // console.log(user.level);
+
+// 2. Suggestion
+console.log("name", user.name.toUpperCase());
+
+
+
 

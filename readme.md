@@ -2,6 +2,7 @@
 #### What is typescript - typescript roadmap
 #### Cai dat moi truong typescript
 ```
+npm install -g typescript
 <!-- Loi power shell -->
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
