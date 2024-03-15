@@ -1,10 +1,6 @@
-console.log("index file 2");
-function sum(a: number, b: number) {
-    return a + b
-}
+console.log("Hello world 4");
 
 const btn = document.querySelector("#btn")
-btn?.addEventListener('click', function () {
-    console.log("abc");
-
+btn?.addEventListener("click", () => {
+    alert(btn.textContent)
 })
