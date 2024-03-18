@@ -28,3 +28,10 @@ console.log(wd18333Map(["A", "B", "C", "D"], item => item + "alphabet"));
 
 
 // ["A", "B", "C", "D"].map(item => item + "alphabet")
+
+console.log(["Tiến", "Vừa đẹp trai vừa thông minh Mạnh Tiến", "Dương", "Tùng"].sort());
+console.log([4, 12, 50, 30].sort((a, b) => a - b));
+
+const wd18333Sort = function () {
+
+}
