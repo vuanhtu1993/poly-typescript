@@ -1,8 +1,9 @@
 // React Component
 const Application = () => {
+    const [state, setState] = React.useState(false)
     return <div>
-        <img src="./image/off.png" alt="" />
-        <button>Switch</button>
+        <img width={80} src={state ? "./image/on.png" : "./image/off.png"} alt="" />
+        <button onClick={() => setState(!state)}>Switch</button>
     </div>
 }
 
