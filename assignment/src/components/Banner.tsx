@@ -9,8 +9,8 @@ const Banner = () => {
                 <div className="w-full text-center">
                     <h2 className="text-white text-2xl">Vexere - Cam kết hoàn 150% nếu nhà xe không giữ chỗ</h2>
                     <form action="" className="bg-white p-4 flex gap-4">
-                        <Select title="Điểm đi" />
-                        <Select title="Điểm đến" />
+                        <Select title="Nơi xuất phát" />
+                        <Select title="Nơi đến" />
                         <Select title="Ngày đi" />
                         <Button title="Tìm kiếm" />
                     </form>

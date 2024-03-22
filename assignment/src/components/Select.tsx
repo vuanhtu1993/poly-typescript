@@ -1,6 +1,7 @@
+
 const Select = (props: { title: string }) => {
     return <div>
-        <label className="block text-gray-900 align-left">{props.title}</label>
+        <label className="block text-gray-900 text-left">{props.title}</label>
 
         <select
             name="HeadlineAct"
