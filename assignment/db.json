@@ -1,0 +1,29 @@
+{
+    "trips": [
+        {
+            "id": "ObjectID",
+            "fromStationId": "ObjectID",
+            "toStationId": "ObjectID",
+            "startTime": "Date",
+            "seats": "Number",
+            "price": "Number",
+            "busHouseId": "ObjectID"
+        }
+    ],
+    "stations": [
+        {
+            "id": "ObjectID",
+            "name": "String",
+            "province": "String"
+        }
+    ],
+    "busHouse": [
+        {
+            "id": "ObjectID",
+            "name": "String",
+            "adress": "String",
+            "phone": "string"
+        }
+    ],
+    "users": []
+}
